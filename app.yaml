@@ -1,0 +1,21 @@
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: .*
+  script: aeroschool.app
+
+libraries:
+- name: python-telegram-bot
+  version: latest
+- name: emoji
+  version: latest
+- name: os
+  version: latest
+- name: sqlite3
+  version: latest
+- name: datetime
+  version: latest
+
+  
