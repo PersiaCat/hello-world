@@ -2,9 +2,18 @@
 #!/usr/bin/python
 
 from __future__ import division
-from telegram.ext import Updater, CommandHandler, CallbackQueryHandler
-from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode
-from emoji import emojize
+import os
+try:
+    from telegram.ext import Updater, CommandHandler, CallbackQueryHandler
+    from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode
+    from emoji import emojize
+except:
+    os.system("pip install python-telegram-bot")
+    os.system("pip install emoji")
+    from telegram.ext import Updater, CommandHandler, CallbackQueryHandler
+    from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode
+    from emoji import emojize
+
 import sqlite3
 import datetime
 
